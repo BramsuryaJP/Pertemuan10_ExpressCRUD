@@ -180,6 +180,7 @@ app.post('/contact', [
     { 
       title: "Contact Page",
       errors: errors.array(),
+      params: req.body
     })
   } else {
     // memanggil function loadContact

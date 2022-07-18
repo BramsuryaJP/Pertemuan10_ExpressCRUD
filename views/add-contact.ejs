@@ -13,17 +13,21 @@
     </div>
   <% } %>
 
+  <!-- membuat variable value untuk menampilkan oldValue -->
+  <% let value %> <% if (locals.params) { value = params %>
+  <% } %>
+
   <div class="mb-3">
     <label for="inputName" class="form-label">Name</label>
-    <input name="name" type="text" class="form-control" id="inputName">
+    <input name="name" type="text" class="form-control" id="inputName" value ="<%= value?.name %>" >
   </div>
   <div class="mb-3">
     <label for="inputPhoneNumber" class="form-label">Phone Number</label>
-    <input name="phoneNumber" type="text" class="form-control" id="inputPhoneNumber" >
+    <input name="phoneNumber" type="text" class="form-control" id="inputPhoneNumber" value ="<%= value?.phoneNumber %>" >
   </div>
   <div class="mb-3">
     <label for="inputEmail" class="form-label">Email</label>
-    <input name="email" type="email" class="form-control" id="inputEmail" >
+    <input name="email" type="email" class="form-control" id="inputEmail" value ="<%= value?.email %>" >
   </div>
   <button type="submit" class="btn btn-success">Add Contact</button>
 </form>
