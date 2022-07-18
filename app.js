@@ -91,7 +91,7 @@ app.use(morgan('dev'));
 // menggunakan express static untuk memberi izin terhadap folder public
 app.use(express.static('public'));
 
-app.use(express.urlencoded());
+app.use(express.urlencoded({extended: true}));
 
 // flash configuration
 app.use(cookieParser('secret'));
@@ -152,7 +152,7 @@ app.get('/contact/add', (req, res) => {
 
   res.render('add-contact', 
   { 
-    title: "Contact Page",
+    title: "Add Contact Page",
     contacts,
   })
 })
@@ -178,7 +178,7 @@ app.post('/contact', [
   if (!errors.isEmpty()) {
     res.render('add-contact', 
     { 
-      title: "Contact Page",
+      title: "Add Contact Page",
       errors: errors.array(),
       params: req.body
     })
@@ -211,7 +211,7 @@ app.get('/contact/:name', (req, res) => {
 
   res.render('detail-page', 
   { 
-    title: "Contact Page",
+    title: "Detail Contact Page",
     contact
   })
 })
@@ -242,7 +242,7 @@ app.get('/contact/edit/:name', (req,res) => {
 
   res.render('edit-contact', 
   { 
-    title: "Contact Page",
+    title: "Edit Contact Page",
     contact
   })
 })
@@ -268,7 +268,7 @@ app.post('/contact/update', [
   if (!errors.isEmpty()) {
     res.render('edit-contact', 
     { 
-      title: "Contact Page",
+      title: "Edit Contact Page",
       errors: errors.array(),
       contact: req.body
     })
