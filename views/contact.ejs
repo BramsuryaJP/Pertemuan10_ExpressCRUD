@@ -12,10 +12,10 @@
 <table class="table table-dark table-striped">
   <thead>
     <tr>
-      <th scope="col">No</th>
+      <th scope="col">No.</th>
       <th scope="col">Name</th>
       <th scope="col">Email</th>
-      <th scope="col">Action</th>
+      <th scope="col" class="text-center">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -27,10 +27,14 @@
       <% let i = 1 %> 
       <% contacts.forEach((data) => { %>
         <tr>
-        <th class="align-middle"><%= i++  %>. </th>
-        <td class="align-middle"><%= data.name %> </td>
-        <td class="align-middle"><%= data.email  %> </td>
-        <td><a href="/contact/<%= data.name  %> "><button type="button" class="btn btn-primary"><i class="fa-solid fa-circle-info pe-2"></i>Detail</button></a></td>
+        <th class="align-middle" style="width: 8%;"><%= i++  %>. </th>
+        <td class="align-middle" style="width: 25%;"><%= data.name %> </td>
+        <td class="align-middle" style="width: 42%;"><%= data.email  %> </td>
+        <td class="text-center">
+          <a href="/contact/<%= data.name %>" class="pe-2"><button type="button" class="btn btn-primary"><i class="fa-solid fa-circle-info pe-2"></i>Detail</button></a>
+          <a href="/contact/edit/<%= data.name %>" class="pe-2"><button type="button" class="btn btn-warning"><i class="fa-solid fa-pencil pe-2"></i>Edit</button></a>
+          <a href="/contact/delete/<%= data.name %>"><button type="button" class="btn btn-danger"><i class="fa-solid fa-trash pe-2"></i>Delete</button></a>
+        </td>
         </tr>
       <% }) %>
     <% } %>
