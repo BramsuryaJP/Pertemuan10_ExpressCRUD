@@ -1,14 +1,14 @@
 
 <h1 class="mt-2"> Detail Contact : </h1>
 
-<div class="card text-white bg-dark" style="width: 18rem;">
+<div class="card text-white bg-dark" style="width: 22rem;">
   <div class="card-body">
     <h5 class="card-title"><%= contact.name %> </h5>
     <h6 class="card-subtitle mb-2 mt-2"><%= contact.phoneNumber %> </h6>
     <p class="card-text"><%= contact.email %> </p>
     <div class="column">
-      <a href="/contact/edit/<%= contact.name  %>"><button type="button" class="btn btn-warning mb-3">Edit Contact</button></a>
-      <a href="/contact/delete/<%= contact.name  %>"><button type="button" class="btn btn-danger mb-3" onclick="return confirm('Yakin Ingin Menghapus Kontak Ini?')">Delete Contact</button></a>
+      <a href="/contact/edit/<%= contact.name  %>" class="pe-2"><button type="button" class="btn btn-warning mb-3"><i class="fa-solid fa-pencil pe-2"></i>Edit Contact</button></a>
+      <a href="/contact/delete/<%= contact.name  %>"><button type="button" class="btn btn-danger mb-3" onclick="return confirm('Yakin Ingin Menghapus Kontak Ini?')"><i class="fa-solid fa-trash-can pe-2"></i>Delete Contact</button></a>
     </div>
     <a href="/contact" class="card-link">Kembali</a>
   </div>
