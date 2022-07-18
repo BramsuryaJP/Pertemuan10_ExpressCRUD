@@ -254,7 +254,7 @@ app.post('/contact/update', [
     const duplicate = cekNama(value);
 
     if ( value !== req.body.oldName && duplicate) {
-      throw new Error('Nama Sudah Terdaftar, Silahkan Gunakan Nama Lain')
+      throw new Error(`${ value } Sudah Terdaftar, Silahkan Gunakan Nama Lain`)
     } else {
       return true;
     }
