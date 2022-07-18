@@ -275,6 +275,9 @@ app.post('/contact/update', [
   } else {
     // memanggil fungsi updateContact
     updateContact(req.body)
+
+    // pesan flash
+    req.flash('msg', 'Data Contact Berhasil Dirubah !');
   
     // mengalihkan kembali ke halaman contact
     res.redirect("/contact")

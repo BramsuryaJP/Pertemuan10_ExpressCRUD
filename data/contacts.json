@@ -1,10 +1,5 @@
 [
   {
-    "name": "Femmy Nur Alifiah",
-    "phoneNumber": "082318471280",
-    "email": "femmynur123@gmail.com"
-  },
-  {
     "name": "Aver Varian Hernawan",
     "phoneNumber": "082130363383",
     "email": "diamondaver@gmail.com"
@@ -13,5 +8,15 @@
     "name": "Bramsurya Johannes paulus",
     "phoneNumber": "089685134266",
     "email": "brmsurya0304@gmail.com"
+  },
+  {
+    "name": "Diaz Pratama ",
+    "phoneNumber": "089685134255",
+    "email": "diazpratama.work@gmail.com"
+  },
+  {
+    "name": "Femmy Nur",
+    "phoneNumber": "082318471280",
+    "email": "femmynur123@gmail.com"
   }
 ]

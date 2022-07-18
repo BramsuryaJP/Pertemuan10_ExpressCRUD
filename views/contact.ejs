@@ -27,7 +27,7 @@
       <% let i = 1 %> 
       <% contacts.forEach((data) => { %>
         <tr>
-        <th class="align-middle"><%= i++  %> </th>
+        <th class="align-middle"><%= i++  %>. </th>
         <td class="align-middle"><%= data.name %> </td>
         <td class="align-middle"><%= data.email  %> </td>
         <td><a href="/contact/<%= data.name  %> "><button type="button" class="btn btn-primary"><i class="fa-solid fa-circle-info pe-2"></i>Detail</button></a></td>
