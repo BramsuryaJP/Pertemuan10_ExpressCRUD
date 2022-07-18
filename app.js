@@ -163,7 +163,7 @@ app.post('/contact', [
     const duplicate = cekNama(value);
 
     if (duplicate) {
-      throw new Error('Nama Sudah Terdaftar, Silahkan Gunakan Nama Lain')
+      throw new Error(`${ value } Sudah Terdaftar, Silahkan Gunakan Nama Lain`)
     } else {
       return true;
     }
