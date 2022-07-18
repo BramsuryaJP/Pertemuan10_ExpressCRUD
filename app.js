@@ -221,7 +221,8 @@ app.get('/contact/delete/:name', (req, res) => {
   const contact = findContact(req.params.name)
 
   if (!contact) {
-    res.status(404)
+    res.status('404')
+    res.send('404')
   } else {
     // memanggil fungsi deleteContact untuk menghapus contact
     deleteContact(req.params.name)
